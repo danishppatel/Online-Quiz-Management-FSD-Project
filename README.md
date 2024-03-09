@@ -21,4 +21,10 @@ Welcome to the Online Quiz Management System, a robust web-based platform built 
 ## Get Started
 1. **Clone the repository:**
    ```bash
-   git clone [repository_url]
+   git clone https://github.com/danishppatel/Online-Quiz-Management-FSD-Project.git
+
+2. **Install Dependency:**
+   - Install dependencies and configure the React frontend in the frontend/ directory:
+   ```bash
+   npm install
+
