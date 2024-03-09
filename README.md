@@ -28,3 +28,9 @@ Welcome to the Online Quiz Management System, a robust web-based platform built 
    ```bash
    npm install
 
+3. **Start the application:**
+   - Run the Spring Boot backend. (IntelliJ IDE)
+   - Start the React frontend: (Vite Project)
+   ```bash
+   npm run dev
+
