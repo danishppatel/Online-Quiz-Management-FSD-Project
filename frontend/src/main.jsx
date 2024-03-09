@@ -17,7 +17,11 @@ const router = createBrowserRouter([
       {
         path:"",
         element:<Home/>
-      }
+      },
+      {
+        path:'/quiz-stepper',
+        element:<QuizStepper/>
+      },
     ]
     
   },

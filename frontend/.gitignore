@@ -12,7 +12,6 @@ UpdateQuestion.jsx
 GetAllQuiz.jsx
 Quiz.jsx
 QuizHeader.jsx
-QuizStepper.jsx
 AboutUs.jsx
 Admin.jsx
 Loading.jsx
