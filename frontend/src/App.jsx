@@ -1,11 +1,15 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
+import Navbar from './components/layout/Navbar.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
-       <h1>Hello Coder</h1>
+    <Navbar/>
+    <Outlet/>
+
     </>
   );
 }

@@ -7,7 +7,6 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-Navbar.jsx
 AddQuestion.jsx
 UpdateQuestion.jsx
 GetAllQuiz.jsx
@@ -16,7 +15,6 @@ QuizHeader.jsx
 QuizStepper.jsx
 AboutUs.jsx
 Admin.jsx
-Home.jsx
 Loading.jsx
 AnswerOptions.jsx
 QuizService.jsx
