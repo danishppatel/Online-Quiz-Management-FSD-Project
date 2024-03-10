@@ -26,6 +26,11 @@ const router = createBrowserRouter([
         path:'/create-quiz',
         element:<AddQuestion/>
       },
+      {
+        path:'/admin',
+        element:<Admin/>
+      },
+
 
     ]
     
