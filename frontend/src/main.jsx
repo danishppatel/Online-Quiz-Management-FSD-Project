@@ -22,6 +22,11 @@ const router = createBrowserRouter([
         path:'/quiz-stepper',
         element:<QuizStepper/>
       },
+      {
+        path:'/create-quiz',
+        element:<AddQuestion/>
+      },
+
     ]
     
   },
