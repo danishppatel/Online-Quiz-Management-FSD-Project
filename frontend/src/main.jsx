@@ -8,6 +8,12 @@ import {
 import './index.css'
 import App from './App.jsx'
 import Home from './components/Home.jsx';
+import QuizStepper from './components/quiz/QuizStepper.jsx';
+import AddQuestion from './components/questions/AddQuestion.jsx'
+import Admin from './components/Admin.jsx';
+import GetAllQuiz from './components/quiz/GetAllQuiz.jsx';
+import UpdateQuestion from './components/questions/UpdateQuestion.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -30,6 +36,15 @@ const router = createBrowserRouter([
         path:'/admin',
         element:<Admin/>
       },
+      {
+        path:'/all-quizzes',
+        element:<GetAllQuiz/>
+      },
+      {
+        path:'/update-question/:id',
+        element:<UpdateQuestion/>
+      },
+
 
 
     ]

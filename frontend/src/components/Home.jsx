@@ -16,10 +16,10 @@ function Home() {
 
       {/* left side */}
       <div className="md:w-1/2 w-full space-y-6 mb-5 ">
-        <h2 className="lg:text-4xl text-3xl font-medium text-[#333] md:w-4/6 lg:leading-normal leading-normal mb-3">
+        <h2 className="lg:text-4xl text-3xl font-medium text-[#333] md:w-4/6 lg:leading-normal leading-normal mb-3 font-sans tracking-wide">
           Learn new concepts for each question
         </h2>
-        <p className="py-2 mb-6 text-gray-500 pl-2 border-l-4 border-indigo-600 text-base">
+        <p className="py-2 mb-6 text-gray-500 pl-2 border-l-4 border-indigo-600 text-base subpixel-antialiased">
           We help you prepare for exams and quizzes
         </p>
         <div className="flex flex-col sm:flex-row gap-5 text-lg font-medium">
