@@ -7,12 +7,8 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-Quiz.jsx
 QuizHeader.jsx
 AboutUs.jsx
-Loading.jsx
-AnswerOptions.jsx
-QuizService.jsx
 
 
 node_modules

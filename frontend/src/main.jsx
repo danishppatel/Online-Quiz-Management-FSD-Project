@@ -13,6 +13,7 @@ import AddQuestion from './components/questions/AddQuestion.jsx'
 import Admin from './components/Admin.jsx';
 import GetAllQuiz from './components/quiz/GetAllQuiz.jsx';
 import UpdateQuestion from './components/questions/UpdateQuestion.jsx';
+import Quiz from './components/quiz/Quiz.jsx';
 
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:"",
         element:<Home/>
+      },
+      {
+        path:'/take-quiz',
+        element:<Quiz/>
       },
       {
         path:'/quiz-stepper',
