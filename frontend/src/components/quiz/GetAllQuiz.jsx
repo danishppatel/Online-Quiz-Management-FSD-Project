@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { FaPlus } from "react-icons/fa6";
 import { IoMdAlert } from "react-icons/io";
 import { CgBrowser } from "react-icons/cg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 function GetAllQuiz() {
@@ -14,6 +17,13 @@ function GetAllQuiz() {
   const [deleteSuccessMessage, setDeleteSuccessMessage] = useState("");
 
   let correct_option;
+
+  const notify = () => {
+    toast("Question Deleted Successfully!", {
+      position: "top-right",
+      className: "toast-message-success",
+    })
+  };
 
   useEffect(()=>{
     fetchAllQuestion();
@@ -42,8 +52,9 @@ function GetAllQuiz() {
       setQuestions(remainingQuestions);
       setIsQuestionDeleted(true);
       setDeleteSuccessMessage("Question Deleted Successfully!")
+      notify();
     } catch (error) {
-      toast.error("Error...Question is not Deleted.");
+      toast.error("Something went to wrong...");
       
     }
 
@@ -120,6 +131,7 @@ function GetAllQuiz() {
       
      } 
      </div>
+     <ToastContainer/>
            
     </section>
   )

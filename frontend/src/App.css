@@ -1,0 +1,95 @@
+body .toast-message-success{
+  background: rgb(1, 1, 162);
+  color: #fff;
+  font-size: 20px;
+  width: 34vw;
+  padding:10px 20px;
+}
+
+/* about us page */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-us {
+  height: 100vh;
+  width: 100%;
+  padding: 90px 0;
+  background: white;
+}
+
+.pic {
+  height: 402px;
+  width: 352px;
+}
+
+.about {
+  width: 90%; 
+  max-width: 1130px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.text {
+  width: 100%;
+  text-align: center; 
+}
+
+.text h2 {
+  font-size: 50px; 
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text h5 {
+  font-size: 18px; 
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 16px; 
+  line-height: 22px;
+  letter-spacing: 1px;
+}
+
+.data {
+  margin-top: 30px;
+}
+
+.hire {
+  font-size: 16px; 
+  background: #FCC822;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 15px; 
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+
+.hire:hover{
+    background: #000;
+    border: 1px solid #4070f4;
+  }
+
+@media only screen and (min-width: 769px) {
+  .about {
+    flex-direction: row; 
+  }
+  .text {
+    text-align: left; 
+    max-width: 540px;
+  }
+  
+  .pic {
+    margin-right: 20px;
+  }
+}

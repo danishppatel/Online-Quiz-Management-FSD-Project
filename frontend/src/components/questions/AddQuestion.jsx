@@ -16,7 +16,14 @@ function AddQuestion() {
   const [subjectOptions, setSubjectOptions] =useState([""])
   const [isTyping, setIsTyping] = useState(false);
 
-  // after completed backend + databases call this api getSubjects();
+  const notify = () => {
+    toast("Question Created Successfully!", {
+      position: "top-right",
+      className: "toast-message-success",
+    })
+  };
+
+
   useEffect(()=>{
     fetchSubjects();
   }, []);
@@ -31,13 +38,12 @@ function AddQuestion() {
       
     } catch (error) {
       //later on toast
-      console.log("fetSubject-addQ ::  ", error);
+      toast.error("Something went to wrong...");
     }
   }
  
   const handleAddChoice = async () =>{
     const lastChoice = choices[choices.length-1];
-    console.log(choices.length, "  ---  " +typeof lastChoice)
     const lastChoiceLetter = lastChoice   ? lastChoice.charAt(0) : 'A';
     const newChoiceLetter = String.fromCharCode(lastChoiceLetter.charCodeAt(0) + 1);
     const newChoice =`${newChoiceLetter}.`;
@@ -102,7 +108,7 @@ function AddQuestion() {
 
     } catch (error) {
       //later on toastify
-      console.log("error of addQuestions :: " ,error)
+      toast.error("Something went to wrong...");
     }
   }  
 
@@ -303,7 +309,7 @@ function AddQuestion() {
           { !correctAnswers && <p>Please enter atleast one correct answer.</p>}
 
           <div className='flex sm:flex-row flex-col mt-10'>
-            <button type='submit' className='border border-green-500 text-green-500 hover:bg-green-500 hover:shadow-md hover:text-white px-4 py-2 sm:mr-2 mr-0 mb-2 rounded'>
+            <button type='submit' onClick={notify} className='border border-green-500 text-green-500 hover:bg-green-500 hover:shadow-md hover:text-white px-4 py-2 sm:mr-2 mr-0 mb-2 rounded'>
               Save Question
             </button>
             <Link to={"/all-quizzes"} className='border text-center border-blue-500 text-blue-500 hover:bg-blue-500 hover:shadow-md hover:text-white px-4 py-2 sm:ml-2 ml-0 mb-2 rounded' > Existing Questions</Link>

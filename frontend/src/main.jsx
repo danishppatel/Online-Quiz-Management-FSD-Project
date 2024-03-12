@@ -49,11 +49,10 @@ const router = createBrowserRouter([
         path:'/update-question/:id',
         element:<UpdateQuestion/>
       },
-     
-
-
-
-
+      {
+        path:'/aboutus',
+        element:<AboutUs/>
+      },
     ]
     
   },

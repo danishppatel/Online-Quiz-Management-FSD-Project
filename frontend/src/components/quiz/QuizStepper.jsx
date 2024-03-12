@@ -26,7 +26,7 @@ function QuizStepper() {
 
       setSubjects(subjectsData)
     } catch (error) {
-      console.log("error",error)
+      toast.error("Something went to wrong...");
     }
   }
 

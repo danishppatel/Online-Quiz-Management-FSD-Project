@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import { getQuestionById, updateQuestion } from '../../utils/QuizService';
 import { debounce } from "lodash";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function UpdateQuestion() {
 
@@ -11,7 +13,13 @@ function UpdateQuestion() {
   const [isLoading, setIsLoading] = useState(true);
   const [isTyping, setIsTyping] = useState(false);
 
-  
+  const notify = () => {
+    toast("Question Update Successfully!", {
+      position: "top-right",
+      className: "toast-message-success",
+    })
+  };
+
   const {id} = useParams();
 
   useEffect(() =>{
@@ -31,7 +39,7 @@ function UpdateQuestion() {
       setIsLoading(false);
 
     }catch (error) {
-      console.log("error...didn't fetch question to be updated :   ", error);
+       toast.error("Something went to wrong...");
     }
   }
 
@@ -70,7 +78,7 @@ function UpdateQuestion() {
       await updateQuestion(id, updatedQuestionData);  //api
 
     } catch (error) {
-        console.log("didn't update successfullt ::  ", error);
+      toast.error("Something went to wrong...");
     }
   }
 
@@ -133,7 +141,7 @@ function UpdateQuestion() {
               </div>
 
               <div className='flex sm:flex-row flex-col mt-10'>
-                <button type='submit' className='border border-green-500 text-green-500 hover:bg-green-500 hover:shadow-md hover:text-white px-4 py-2 sm:mr-2 mr-0 mb-2 rounded'>
+                <button type='submit' onClick={notify}  className='border border-green-500 text-green-500 hover:bg-green-500 hover:shadow-md hover:text-white px-4 py-2 sm:mr-2 mr-0 mb-2 rounded'>
                   Update Question
                 </button>
 
@@ -144,6 +152,7 @@ function UpdateQuestion() {
            </form>
         </div>
       </div>    
+      <ToastContainer/>
     </section>
   )
 }
