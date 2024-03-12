@@ -23,14 +23,17 @@ Welcome to the Online Quiz Management System, a robust web-based platform built 
    ```bash
    git clone https://github.com/danishppatel/Online-Quiz-Management-FSD-Project.git
 
-2. **Install Dependency:**
+2. **Set up the database:(application.properties File)**
+   - Install MySQL and create a new database.
+   - Update the application.properties file with your database configuration.
+
+3. **Install Dependency:**
    - Install dependencies and configure the React frontend in the frontend/ directory:
    ```bash
    npm install
 
-3. **Start the application:**
+4. **Start the application:**
    - Run the Spring Boot backend. (IntelliJ IDE)
    - Start the React frontend: (Vite Project)
    ```bash
    npm run dev
-
