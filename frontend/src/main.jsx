@@ -14,6 +14,8 @@ import Admin from './components/Admin.jsx';
 import GetAllQuiz from './components/quiz/GetAllQuiz.jsx';
 import UpdateQuestion from './components/questions/UpdateQuestion.jsx';
 import Quiz from './components/quiz/Quiz.jsx';
+import AboutUs from './components/AboutUs.jsx';
+
 
 
 const router = createBrowserRouter([
